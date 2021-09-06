@@ -5,7 +5,7 @@
       <form @submit.prevent="addTodo">
         <!-- when this form submitted we can call addTodo fucntion -->
         <label for="newTodo">New Todo</label>
-        <input v-model="newTodo" type="text" name="newTodo" id="newTodo" />
+        <input v-model="newTodo" type="text" name="newTodo" id="newTodo" placeholder="Add something?"/>
         <!-- whenever user typed in input box its saved to data  -->
         <button type="submit" name="button">Add</button>
       </form>
@@ -63,11 +63,25 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hello{
-  
+  color: rgb(211, 211, 235);
 }
 .todo {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
+}
+.todo button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: transparent;
+}
+
+.todo input {
+  padding: 10px 15px;
+  width: 800px;
+  border-radius: 5px;
+  border: transparent;
+  text-align: left;
 }
 .done {
   text-decoration: line-through;
