@@ -4,7 +4,7 @@
     <div class="todo">
       <form @submit.prevent="addTodo">
         <!-- when this form submitted we can call addTodo fucntion -->
-        <label for="newTodo">New Todo</label>
+        <label for="newTodo"></label>
         <input v-model="newTodo" type="text" name="newTodo" id="newTodo" placeholder="Add something?"/>
         <!-- whenever user typed in input box its saved to data  -->
         <button type="submit" name="button">Add</button>
@@ -16,6 +16,7 @@
           <input
             type="checkbox"
             v-model="todo.done"
+            style="margin-right: 30px;"
           /><!-- to check that the items is checked or not with v-model to update the value within-->
           <span :class="{ done: todo.done }">{{ todo.title }}</span>
           <button type="button" @click="removeTodo(todo)">Remove</button>
@@ -29,7 +30,7 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      title: "Hello Fatkhuri Fazri",
+      title: "Vue2 Todo App",
       newTodo: "",
       todos: [], // to save datas
     };
@@ -85,5 +86,9 @@ export default {
 }
 .done {
   text-decoration: line-through;
+}
+
+ol li button {
+  margin-left: 30px;
 }
 </style>
