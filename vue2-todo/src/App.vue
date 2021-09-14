@@ -2,16 +2,22 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <Todo />
+    <VuexTodo />
+    <!-- <Header /> -->
   </div>
 </template>
 
 <script>
 import Todo from "./components/Todo.vue";
+import VuexTodo from "./components/VuexTodo.vue";
+// import Header from "./components/Header.vue"
 
 export default {
   name: "App",
   components: {
     Todo,
+    // Header,
+    VuexTodo,
   },
 };
 </script>
